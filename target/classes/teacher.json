@@ -1,0 +1,12 @@
+{
+  "id": 100,
+  "firstName": "Ramazan",
+  "lastName": "Kocaoglu",
+  "adress": {
+    "country":"Turkey",
+    "city":"Adana",
+    "postalCode":"01100"
+  },
+  "languages": ["Turkish","English","German"],
+  "programmingLanguage": "Java"
+}

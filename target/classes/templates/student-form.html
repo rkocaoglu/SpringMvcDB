@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="https://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+            crossorigin="anonymous"></script>
+</head>
+<body>
+<div class="container">
+    <div class="jumbotron">
+        <h1>Add New Student</h1>
+    </div>
+    <div>
+        <form method="POST" th:action="@{/student/saveStudent}" th:object="${student}">
+
+            <input type="hidden" th:field="*{id}" />
+            <div class="form-group">
+                <label for="adi" class="col-sm-2 control-label">Öğrenci Adı</label>
+                <div>
+                    <input type="text" class="form-control" id="adi" placeholder="Adı" th:field="*{firstName}"/>
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="soyadi" class="col-sm-2 control-label">Öğrenci SoyAdı</label>
+                <div>
+                    <input type="text" class="form-control" id="soyadi" placeholder="Adı" th:field="*{lastName}"/>
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="email" class="col-sm-2 control-label">E-mail</label>
+                <div>
+                    <input type="text" class="form-control" id="email" placeholder="Adı" th:field="*{email}"/>
+                </div>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Kaydet" class="btn btn-primary">
+            </div>
+        </form>
+        <p>
+            <a href="/student/list">Öğrenci Listesine geri git</a>
+        </p>
+    </div>
+
+</div>
+
+</body>
+</html>
